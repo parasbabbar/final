@@ -99,5 +99,10 @@ For AWS CLI
 22) Created deleteContinuousDeliveryCodeDeployApp.sh to delete deployment application.
 23) Domain Name of our Web Application: https://www.neu-csye6225-spring2017-team-3.com
 24) Created DKIM and SPF record for SES
-###########cLOUDW
 25) Got production access for SES
+
+Assn 9:
+
+1)Cloudwatch agent installed(see the aws.conf file)
+2)Timezone updated with ec2 launch script
+3)Pen. Test Report Attached
