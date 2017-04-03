@@ -14,3 +14,4 @@ cd /home/ubuntu
 wget https://aws-codedeploy-us-west-1.s3.amazonaws.com/latest/install
 chmod +x ./install
 ./install auto
+sudo timedatectl set-timezone Etc/UTC
