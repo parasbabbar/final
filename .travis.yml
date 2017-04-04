@@ -31,7 +31,7 @@ deploy:
   - provider: codedeploy
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     bucket: testingcodedeployneucsye6225
-    key: test.zip
+    key: newrepo.zip
     bundle_type: zip
     application: csye6225-3-test
     deployment_group: csye6225-3-test
@@ -43,4 +43,4 @@ deploy:
 notifications:
   email:
     recipients:
-    - goel.t@gmail.com
+    - tushargl016@gmail.com
