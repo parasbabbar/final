@@ -21,7 +21,7 @@ before_deploy:
 
 deploy:
   - provider: s3
-    access_key_id: AKIAJEPUN3YQCGSDQBMQ
+    access_key_id: 
     secret_access_key:
      secure: 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
     local_dir: codedeploy
@@ -29,7 +29,7 @@ deploy:
     region: us-west-1
     skip_cleanup: true
   - provider: codedeploy
-    access_key_id: AKIAJEPUN3YQCGSDQBMQ
+    access_key_id: 
     bucket: testingcodedeployneucsye6225
     key: newrepo.zip
     bundle_type: zip
