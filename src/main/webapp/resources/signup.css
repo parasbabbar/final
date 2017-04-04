@@ -1,0 +1,31 @@
+
+
+
+
+
+div#feedback {
+text-align:center;
+height:600px;
+width:430px;
+padding:20px 25px 40px 40px;
+background-color:#f3f3f3;
+border-radius:3px;
+border:1px solid #cd853f;
+font-family:'Raleway',sans-serif;
+float:center;
+
+margin-top: 100px;
+}
+.container {
+width:1000px;
+float: center;
+margin:40px auto;
+
+}
+
+h4,p,label {
+text-align: center;
+font-family:'Raleway',sans-serif;
+color:#006400
+}
+
