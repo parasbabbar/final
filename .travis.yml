@@ -43,4 +43,4 @@ deploy:
 notifications:
   email:
     recipients:
-    - babbar.p@husky.neu.edu
+    - goel.t@husky.neu.edu
