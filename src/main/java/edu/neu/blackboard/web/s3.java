@@ -30,17 +30,6 @@ public class s3 {
 	
 	@RequestMapping(method = RequestMethod.POST, value="/upload")
 	public String handleFileUpload(@RequestParam("photo") MultipartFile file, RedirectAttributes redirectattributes)
-	{ String name="hola";
-		credentials c = new credentials();
-		AmazonS3Client s3Client = new AmazonS3Client(c.awscreds);
-		String bucketname="testingcodedeployneucsye6225";
-		try{
-			InputStream is = file.getInputStream();
-			PutObjectRequest putRequest1 = (new PutObjectRequest(bucketname, name, is, new ObjectMetadata()));
-	}
-		catch(IOException e){
-			System.out.println();
-			}
 		return "home";}
 		
 
