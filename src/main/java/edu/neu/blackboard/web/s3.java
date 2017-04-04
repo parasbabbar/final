@@ -29,7 +29,7 @@ import com.amazonaws.services.s3.model.S3Object;
 public class s3 {
 	
 	@RequestMapping(method = RequestMethod.POST, value="/upload")
-	public String handleFileUpload(@RequestParam("photo") MultipartFile file, RedirectAttributes redirectattributes)
+	public String handleFileUpload()
 		return "home";}
 		
 
