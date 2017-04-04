@@ -1,0 +1,46 @@
+language: java
+jdk:
+- oraclejdk8
+sudo: false
+install: true
+script:
+- mvn package
+after_success:
+- mkdir codedeploy
+- zip -r newrepo.zip target/project-1.0.0-BUILD-SNAPSHOT.war appspec.yml restartTomcat.sh
+- ls -al
+- mv newrepo.zip codedeploy/
+- ls -al
+- pwd
+- cd codedeploy
+- ls -al
+- pwd
+before_deploy:
+- cd ..
+- pwd
+
+deploy:
+  - provider: s3
+    access_key_id: AKIAJEPUN3YQCGSDQBMQ
+    secret_access_key:
+     secure: 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
+    local_dir: codedeploy
+    bucket: testingcodedeployneucsye6225
+    region: us-west-1
+    skip_cleanup: true
+  - provider: codedeploy
+    access_key_id: AKIAJEPUN3YQCGSDQBMQ
+    bucket: testingcodedeployneucsye6225
+    key: newrepo.zip
+    bundle_type: zip
+    application: csye6225-3-test
+    deployment_group: csye6225-3-test
+    region: us-west-1
+    wait-until-deployed: true
+    secret_access_key:
+     secure: xPsyE/w3EAPSKDudTbH0mag79jNj4tlQA5FcgaI7
+
+notifications:
+  email:
+    recipients:
+    - tarungl016@gmail.com
