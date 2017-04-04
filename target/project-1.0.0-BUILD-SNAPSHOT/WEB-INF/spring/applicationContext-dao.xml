@@ -9,9 +9,9 @@
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp2.BasicDataSource"
 		p:driverClassName="com.mysql.jdbc.Driver"
-		p:url="jdbc:mysql://aa1whfc0yf8xs2h.cotkzhn8n7ow.us-west-2.rds.amazonaws.com:3306/ebdb"
-		p:username="root"
-		p:password="nemesiss" />
+		p:url="jdbc:mysql://newcsye6225.chajrgs5exlu.us-west-1.rds.amazonaws.com:3306/csye6225"
+		p:username="csye6225"
+		p:password="csye6225" />
 		
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />

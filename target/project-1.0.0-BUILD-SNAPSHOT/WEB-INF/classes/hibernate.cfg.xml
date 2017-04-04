@@ -9,6 +9,7 @@
   <property name="hibernate.hbm2ddl.auto">update</property>
   <property name="use_sql_comments">true</property>
      <mapping class="edu.neu.blackboard.domain.Users" />
+     <mapping class="edu.neu.blackboard.domain.Forgot" />
    <mapping class="edu.neu.blackboard.domain.Items" />
    <mapping class="edu.neu.blackboard.domain.Orderlist" />
    <mapping class="edu.neu.blackboard.domain.Order" />
