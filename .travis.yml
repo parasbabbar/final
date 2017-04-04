@@ -7,9 +7,9 @@ script:
 - mvn package
 after_success:
 - mkdir codedeploy
-- zip -r test.zip target/project-1.0.0-BUILD-SNAPSHOT.war appspec.yml restartTomcat.sh
+- zip -r newrepo.zip target/project-1.0.0-BUILD-SNAPSHOT.war appspec.yml restartTomcat.sh
 - ls -al
-- mv test.zip codedeploy/
+- mv newrepo.zip codedeploy/
 - ls -al
 - pwd
 - cd codedeploy
