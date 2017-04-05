@@ -9,7 +9,7 @@
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp2.BasicDataSource"
 		p:driverClassName="com.mysql.jdbc.Driver"
-		p:url="jdbc:mysql://newcsye6225.chajrgs5exlu.us-west-1.rds.amazonaws.com:3306/commerce"
+		p:url="jdbc:mysql://newcsye6225.chajrgs5exlu.us-west-1.rds.amazonaws.com:3306/csye6225"
 		p:username="csye6225"
 		p:password="csye6225" />
 		
