@@ -9,4 +9,6 @@ public interface ForgetService {
 	public resetobj checkticket(String id);
 
 	public void removeticket(String id);
+
+	public void removeticket2(String email);
 }

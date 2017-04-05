@@ -28,15 +28,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index" method="GET">Dressup</a>
+     <a class="navbar-brand" href="${pageContext.request.contextPath}/home" method="GET">Dressup</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
       <li><a href="${pageContext.request.contextPath}/homey">HOME</a></li>
         <li><a href="${pageContext.request.contextPath}/aboutus">ABOUT</a></li>
         <li><a href="${pageContext.request.contextPath}/home">MENU</a></li>
-	
-		<c:choose>
+	 <li><a href="${pageContext.request.contextPath}/careers">Careers</a></li>
+      	<c:choose>
     <c:when test="${sessionScope.email != null}">
  <li><a href="${pageContext.request.contextPath}/logout" method="get"><span class="glyphicon glyphicon-user"></span> Logout</li></a> 
         <br />

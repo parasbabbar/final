@@ -12,5 +12,6 @@ public interface ForgetDAO {
 	public resetobj checkticket(String id);
 
 	public void removeticket(String id);
+	public void removeticket2(String email);
 
 }

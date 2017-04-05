@@ -34,6 +34,12 @@ public class ForgetServiceImpl implements ForgetService {
 		foregetDAO.removeticket(id);
 		
 	}
+	@Override
+	public void removeticket2(String email) {
+		// TODO Auto-generated method stub
+		foregetDAO.removeticket2(email);
+		
+	}
 	
 
 }

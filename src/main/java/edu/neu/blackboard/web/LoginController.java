@@ -1,7 +1,7 @@
 package edu.neu.blackboard.web;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-
+import com.amazonaws.services.s3.model.ObjectMetadata;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -20,12 +20,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.CannedAccessControlList;
+import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClient;
+
 import edu.neu.blackboard.domain.*;
 import edu.neu.blackboard.service.*;
 import java.security.SecureRandom;
 import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigInteger;
-
+import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.S3Object;
 @Controller
 @Configuration
 @ComponentScan("edu.neu.blackboard.service")
@@ -60,7 +68,35 @@ public class LoginController {
 		return"homey";
 	}
 
+	@RequestMapping(value="/careers", method = RequestMethod.GET)
+	public String careerpage(Model model){
+		
+		return"Careers";
+	}
+	@RequestMapping(value="/accept", method = RequestMethod.GET)
+	public String applicationaccepted(Model model){
+		
+		return"accept";
+	}
 	
+	@RequestMapping(value="/uploadprofile", method = RequestMethod.POST)
+	public String uploadprofile(@RequestParam("name") String name,@RequestParam("file") MultipartFile file,Model model){
+		 credentials c = new credentials();
+        AmazonS3 s3client = new AmazonS3Client(c.awscreds);
+        String bucketname="testingcodedeployneucsye6225";
+        try{
+        	InputStream is =file.getInputStream();
+        s3client.putObject(new PutObjectRequest(bucketname,name,is,new ObjectMetadata()).withCannedAcl(CannedAccessControlList.PublicRead));
+        S3Object s3object=s3client.getObject(new GetObjectRequest(bucketname,name));
+        return"accept";
+        }
+        catch(IOException ex)
+        {
+        	return"login";
+        }
+        
+	}
+
 
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String processForm(@Valid Users user,BindingResult result, ModelMap model,HttpSession session) throws IOException {
@@ -104,9 +140,11 @@ public class LoginController {
 
 		
 		if(loginService.checkuser(user) != null){
+			System.out.println(com.fasterxml.jackson.databind.ObjectMapper.class.getProtectionDomain().getCodeSource().getLocation());
 			 long time= System.currentTimeMillis();
 			 SecureRandom random = new SecureRandom();  
 			   String id= new BigInteger(130, random).toString(32);
+			   System.out.println(id+time+user.getEmail());
 			forgetService.addticket(user.getEmail(), time, id);
 			String FROM = "passwordreset@neu-csye6225-spring2017-team-3.com"; 
 			String TO = user.getEmail();
@@ -139,16 +177,18 @@ public class LoginController {
 			return "resettimeout";
 		}
 		else{
-			session.setAttribute("email", email);
+			session.setAttribute("tempemail", email);
 		return "resetpassword";
 		}
 	}
 	@RequestMapping(value="/performreset", method=RequestMethod.POST)
 	public String performreset(@RequestParam("passw") String password,HttpSession session,ModelMap model)
 	{
-        String email=session.getAttribute("email").toString();
+        String email=session.getAttribute("tempemail").toString();
 		registerService.updatepassword(email,password);
 		session.invalidate();
+		forgetService.removeticket2(email);
+		
 		model.put("errormessage","Password has been changed try logging in using new password");
 		return "login";
 		

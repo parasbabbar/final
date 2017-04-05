@@ -1,8 +1,9 @@
 package edu.neu.blackboard.dao;
 import java.util.Collection;
-
+import org.hibernate.Session;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -31,16 +32,22 @@ public class RegisterHibernateDAOImpl implements RegisterDAO {
 	public void updatepassword(String email, String password) {
 		// TODO Auto-generated method stub
 		Query query=sessionFactory.getCurrentSession().createQuery("from Users as r where r.email='" + email + "'");
-		/*query.setParameter(0,user.getEmail());
-		query.setParameter(1,user.getPassword());
-		*/
-	 Users us= (Users)query.uniqueResult();
-	 us.getAddress();
-	 us.getEmail();
-	 us.setPassword(password);
-		sessionFactory.getCurrentSession().update(us);
-
-
+		
+	 Users us2= (Users)query.uniqueResult();
+	 
+		Session s=sessionFactory.openSession();
+		Transaction tx3 = s.beginTransaction();
+		Users u= new Users();
+		long id=us2.getId();
+	 u.setId(id);	
+	 u.setPassword(password);
+	 u.setEmail(email);
+	 u.setAddress( us2.getAddress());
+	 u.setUserName(us2.getUserName());
+	 s.update(u);
+		//sessionFactory.getCurrentSession().update(us2);
+tx3.commit();
+s.close();
 	}
 
 }

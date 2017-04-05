@@ -22,6 +22,13 @@ public class Users {
 		@GeneratedValue
 		private Long id;
 		
+		public Long getId() {
+			return id;
+		}
+		public void setId(Long id) {
+			this.id = id;
+		}
+
 		@NotEmpty
 		private String userName;
 		

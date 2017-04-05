@@ -3,7 +3,9 @@ package edu.neu.blackboard.dao;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,12 +16,14 @@ public class ForgetHibernateDAOImpl implements ForgetDAO {
 	private SessionFactory sessionFactory;
 	@Override
 	public void addticket(String email, long time, String id) {
-   
+	Session s=sessionFactory.openSession();
+	Transaction tx=s.beginTransaction();
     Forgot forg= new Forgot();
     forg.setEmail(email);
     forg.setTime(time);
     forg.setId(id);
-    sessionFactory.getCurrentSession().save(forg);	
+    s.save(forg);
+    tx.commit();
 	}
 
 	@Override
@@ -46,6 +50,16 @@ public class ForgetHibernateDAOImpl implements ForgetDAO {
 	@Override
 	public void ch(Forgot forg) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeticket2(String email) {
+		// TODO Auto-generated method stub
+		Query query = sessionFactory.getCurrentSession().createQuery("delete Forgot where email = :ID");
+		query.setParameter("ID", email);
+		 
+	 query.executeUpdate();
 		
 	}
 
