@@ -7,13 +7,12 @@
 <title> Forget password</title>
 </head>
 <body>
-<form action="forgot" method="post">
+<form action="forgot" method="POST">
 enter email:
- <input type="text" placeholder="Enter Username" name="email" required>
+<input type="text" name="email" >
+
  <input type="submit">
 
 </form>
-
-<a href="dumbo"> Dumbo click here </a>
 </body>
 </html>
