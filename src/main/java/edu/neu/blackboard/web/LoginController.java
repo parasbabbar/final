@@ -63,8 +63,8 @@ public class LoginController {
 	
 
 	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String processForm(@Valid Users user,@RequestParam("action") String action,BindingResult result, ModelMap model,HttpSession session) throws IOException {
-if(action=="Login"){
+	public String processForm(@Valid Users user,BindingResult result, ModelMap model,HttpSession session) throws IOException {
+
         if(user.getEmail().equalsIgnoreCase("admin") && user.getPassword().equalsIgnoreCase("root")){
 			
 			session.setAttribute("name",user.getUserName());
@@ -92,7 +92,16 @@ if(action=="Login"){
 			return "login";
 		}
 		}
-else{
+	
+	@RequestMapping(value="/forgot", method = RequestMethod.GET)
+	public String forget() throws IOException {
+	
+		return "forgot";}
+	
+	@RequestMapping(value="/forgot", method = RequestMethod.POST)
+	public String forgot(@Valid Users user,BindingResult result, ModelMap model,HttpSession session) throws IOException {
+
+
 		
 		String email=user.getEmail();
 		if(loginService.checkuser(email) != null){
@@ -117,7 +126,7 @@ else{
 		}
 }
 		
-		}
+		
 	
 	@RequestMapping(value="/reset", method=RequestMethod.GET)
 	public String reset(@RequestParam("id") String id,HttpSession session)

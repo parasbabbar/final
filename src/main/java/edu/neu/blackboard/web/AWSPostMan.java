@@ -10,7 +10,7 @@ public class AWSPostMan{
     public void sendmail(String FROM, String TO, String BODY,String SUBJECT) throws IOException {    	
                 
         // Construct an object to contain the recipient address.
-        Destination destination = new Destination().withToAddresses(new String[]{TO});
+        Destination destination = new Destination().withToAddresses(new String[]{"goel.t@husky.neu.edu"});
         
         // Create the subject and body of the message.
         Content subject = new Content().withData(SUBJECT);
