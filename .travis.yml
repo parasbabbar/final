@@ -23,7 +23,7 @@ deploy:
   - provider: s3
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     secret_access_key:
-     secure: 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
+     secure: 
     local_dir: codedeploy
     bucket: testingcodedeployneucsye6225
     region: us-west-1
@@ -38,7 +38,7 @@ deploy:
     region: us-west-1
     wait-until-deployed: true
     secret_access_key:
-     secure: xPsyE/w3EAPSKDudTbH0mag79jNj4tlQA5FcgaI7
+     secure: 
 
 notifications:
   email:
