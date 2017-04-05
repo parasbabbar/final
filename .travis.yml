@@ -14,7 +14,6 @@ after_success:
 - pwd
 - cd codedeploy
 - ls -al
-- pwd
 before_deploy:
 - cd ..
 - pwd
@@ -23,7 +22,7 @@ deploy:
   - provider: s3
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     secret_access_key:
-     secure: 
+     secure: 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
     local_dir: codedeploy
     bucket: testingcodedeployneucsye6225
     region: us-west-1
@@ -38,9 +37,9 @@ deploy:
     region: us-west-1
     wait-until-deployed: true
     secret_access_key:
-     secure: 
+     secure: xPsyE/w3EAPSKDudTbH0mag79jNj4tlQA5FcgaI7
 
 notifications:
   email:
     recipients:
-    - tarungl016@gmail.com
+    - goel.t@husky.neu.edu
