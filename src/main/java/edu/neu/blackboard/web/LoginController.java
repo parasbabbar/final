@@ -99,11 +99,10 @@ public class LoginController {
 		return "forgot";}
 	
 	@RequestMapping(value="/forgot", method = RequestMethod.POST)
-	public String forgot(@Valid Users user,BindingResult result, ModelMap model,HttpSession session) throws IOException {
+	public String forgot(@RequestParam("email") String email,BindingResult result, ModelMap model,HttpSession session) throws IOException {
 
 
 		
-		String email=user.getEmail();
 		if(loginService.checkuser(email) != null){
 			 long time= System.currentTimeMillis();
 			 SecureRandom random = new SecureRandom();  
