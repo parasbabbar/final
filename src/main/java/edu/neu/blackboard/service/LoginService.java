@@ -9,5 +9,6 @@ public interface LoginService {
 	public Collection<Users> list();
 
 	public void increasetotalcost(String totalcost, String string);
-	public String checkuser(String email);
+
+	public Users checkuser(Users user);
 }

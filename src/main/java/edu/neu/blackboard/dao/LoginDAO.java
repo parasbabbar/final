@@ -10,5 +10,6 @@ public interface LoginDAO {
 	public Collection<Users> list();
 
 	public void increasetotalcost(String totalcost, String email);
-	public String checkuser(String email);
+	
+	public Users checkuser(Users user);
 }

@@ -99,17 +99,17 @@ public class LoginController {
 		return "forgot";}
 	
 	@RequestMapping(value="/forgot", method = RequestMethod.POST)
-	public String forgot(@RequestParam("email") String email,BindingResult result, ModelMap model,HttpSession session) throws IOException {
+	public String forgot(@Valid Users user,BindingResult result, ModelMap model,HttpSession session) throws IOException {
 
 
 		
-		if(loginService.checkuser(email) != null){
+		if(loginService.checkuser(user) != null){
 			 long time= System.currentTimeMillis();
 			 SecureRandom random = new SecureRandom();  
 			   String id= new BigInteger(130, random).toString(32);
-			forgetService.addticket(email, time, id);
+			forgetService.addticket(user.getEmail(), time, id);
 			String FROM = "passwordreset@neu-csye6225-spring2017-team-3.com"; 
-			String TO = email;
+			String TO = user.getEmail();
 			String SUBJECT = "Forgot Your Password?";
 			 String newline = System.getProperty("line.separator");
 			 String link="https://neu-csye6225-spring2017-team-3.com/reset/?id="+id+"";

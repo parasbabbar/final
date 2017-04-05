@@ -37,9 +37,12 @@ public class LoginHibernateDAOImpl implements LoginDAO{
 		
 	}
 	@Override
-public String checkuser(String email) {
-		return sessionFactory.getCurrentSession().createQuery("from Users as r where r.email='" + email + "'").toString();
-		
+public Users checkuser(Users user) {
+		Query query=sessionFactory.getCurrentSession().createQuery("from Users as r where r.email='" + user.getEmail() + "'");
+		/*query.setParameter(0,user.getEmail());
+		query.setParameter(1,user.getPassword());
+		*/
+	return (Users)query.uniqueResult();
 	}
 	
 }

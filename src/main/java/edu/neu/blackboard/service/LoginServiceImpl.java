@@ -22,9 +22,9 @@ public class LoginServiceImpl implements LoginService {
 	}
 	@Override
 	@Transactional
-	public String checkuser(String email) {
+	public Users checkuser(Users user) {
 		// TODO Auto-generated method stub
-		return loginDAO.checkuser(email);
+		return loginDAO.checkuser(user);
 	}
 
 	@Override

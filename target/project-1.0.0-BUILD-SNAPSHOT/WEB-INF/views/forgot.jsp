@@ -10,7 +10,8 @@
 <title> Forget password</title>
 </head>
 <body>
-<form action="forgot" method="POST">
+<form action="forgot" method="POST" name="user" modelAttribute="user">
+ 
 ${errormessage}
 enter email:
 <input type="text" name="email" >
