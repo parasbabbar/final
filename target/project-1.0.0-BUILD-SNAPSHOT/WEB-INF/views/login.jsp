@@ -131,11 +131,12 @@ ${errormessage}
 
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password">        
-    <button type="submit" name="action" value="Login">Login</button>
-    <button type="submit" name="action" value="Forgot">Forgot Your Password???</button>
+    <button type="submit">Login</button>
   </div>
   </form>
 <a href="${pageContext.request.contextPath}/register" method="GET" style="margin-left:573px">New User? Register here</a>
+
+<a href="${pageContext.request.contextPath}/forgot" method="GET" style="margin-left:573px">Forgot your password</a>
 
 
 
