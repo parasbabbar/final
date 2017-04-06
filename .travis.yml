@@ -16,7 +16,6 @@ after_success:
 - ls -al
 before_deploy:
 - cd ..
-- pwd
 
 deploy:
   - provider: s3
