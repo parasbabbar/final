@@ -17,7 +17,6 @@ after_success:
 - pwd
 before_deploy:
 - cd ..
-- rm -rf /var/lib/tomcat7/project-1.0.0-BUILD-SNAPSHOT.war
 - pwd
 
 deploy:
