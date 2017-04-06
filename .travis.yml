@@ -7,9 +7,9 @@ script:
 - mvn package
 after_success:
 - mkdir codedeploy
-- zip -r final.zip target/project-1.0.0-BUILD-SNAPSHOT.war appspec.yml restartTomcat.sh
+- zip -r test.zip target/project-1.0.0-BUILD-SNAPSHOT.war appspec.yml restartTomcat.sh
 - ls -al
-- mv final.zip codedeploy/
+- mv test.zip codedeploy/
 - ls -al
 - pwd
 - cd codedeploy
@@ -31,7 +31,7 @@ deploy:
   - provider: codedeploy
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     bucket: code-deploy.neu-csye6225-spring2017-team-3.com
-    key: final.zip
+    key: test.zip
     bundle_type: zip
     application: csye6225-3
     deployment_group: csye6225-3
