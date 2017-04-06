@@ -17,6 +17,7 @@ after_success:
 - pwd
 before_deploy:
 - cd ..
+- pwd
 
 deploy:
   - provider: s3
