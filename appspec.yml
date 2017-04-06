@@ -7,7 +7,7 @@ files:
   - source: ./restartTomcat.sh
     destination: /home/ubuntu
   - source: ./target/project-1.0.0-BUILD-SNAPSHOT.war
-    destination: /var/lib/tomcat7
+    destination: /var/lib/tomcat7/webapps
 
 #permissions:
 #  - object: /var/lib/tomcat7/webapps
