@@ -23,7 +23,7 @@ deploy:
   - provider: s3
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     secret_access_key:
-     secure: BgJLk8wkoUHhT7JttoqB2INYDVzvP7yPLGKP/pS10EhsaW3BE1TiL/i43Hqz/GZMJKFl2zQzVtHOe2338BZLJvCHBQbV26+lN2c2KF+RunW1mUXvEmzhxzbr1c0feRHc75sOP+wizxMelQlgfCqB9AFfO1mGmtaa0zgXOcP2et/1CEeRhosntQVvNYuPLHpnr/35Ssil4cbeSmWki/dnhbGAk3simHtYklSCPEPjJpF5EixZP7GCnteikdQ7Sl0MPXV8fCN4EcNtp6gcpJE4f5WotVufNhCn3KQssC2m30Mv2NncJALBsvPErA4Xy2dcaDm2YgBbtTZK1vR713DDmawV5l+MRvVDfCvCurqm084f9kSa9LGMMo9ObHVKS2hDAc9mMkN7KMZLRKJkLMRw5rgGg6G9LLlkYh9whP62WrHzLyO2hYqDGzDOJ1xUOhebliB6xVKc5lBUC2HSPW8bU8qo6Zn8WmFxIiO/8tYGU0o8rQdCzHRiW+KA1C1sTOBgScU3L5Eom2JyHv+0Ykz15b6O18nOkgYcTQYiOSL2uWd6S0G6GM/aTCIQSnNlkyL+b3Uzujrf5a8M+YvLCtR9qh4Dj4CAiunTOCCCDT/IXJsEhLRWveQB/4HRgoIdavPmnLawb+ts5lh99UIRNrXQPBOxkGhVcfjzHuKJPZszZAY=
+     secure: xPsyE/w3EAPSKDudTbH0mag79jNj4tlQA5FcgaI7
     local_dir: codedeploy
     bucket: code-deploy.neu-csye6225-spring2017-team-3.com
     region: us-west-1
@@ -38,8 +38,7 @@ deploy:
     region: us-west-1
     wait-until-deployed: true
     secret_access_key:
-     secure: BgJLk8wkoUHhT7JttoqB2INYDVzvP7yPLGKP/pS10EhsaW3BE1TiL/i43Hqz/GZMJKFl2zQzVtHOe2338BZLJvCHBQbV26+lN2c2KF+RunW1mUXvEmzhxzbr1c0feRHc75sOP+wizxMelQlgfCqB9AFfO1mGmtaa0zgXOcP2et/1CEeRhosntQVvNYuPLHpnr/35Ssil4cbeSmWki/dnhbGAk3simHtYklSCPEPjJpF5EixZP7GCnteikdQ7Sl0MPXV8fCN4EcNtp6gcpJE4f5WotVufNhCn3KQssC2m30Mv2NncJALBsvPErA4Xy2dcaDm2YgBbtTZK1vR713DDmawV5l+MRvVDfCvCurqm084f9kSa9LGMMo9ObHVKS2hDAc9mMkN7KMZLRKJkLMRw5rgGg6G9LLlkYh9whP62WrHzLyO2hYqDGzDOJ1xUOhebliB6xVKc5lBUC2HSPW8bU8qo6Zn8WmFxIiO/8tYGU0o8rQdCzHRiW+KA1C1sTOBgScU3L5Eom2JyHv+0Ykz15b6O18nOkgYcTQYiOSL2uWd6S0G6GM/aTCIQSnNlkyL+b3Uzujrf5a8M+YvLCtR9qh4Dj4CAiunTOCCCDT/IXJsEhLRWveQB/4HRgoIdavPmnLawb+ts5lh99UIRNrXQPBOxkGhVcfjzHuKJPZszZAY=
-
+     secure: xPsyE/w3EAPSKDudTbH0mag79jNj4tlQA5FcgaI7
 notifications:
   email:
     recipients:
