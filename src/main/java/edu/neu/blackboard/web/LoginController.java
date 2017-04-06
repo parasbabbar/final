@@ -26,6 +26,8 @@ import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClient;
 
+
+
 import edu.neu.blackboard.domain.*;
 import edu.neu.blackboard.service.*;
 import java.security.SecureRandom;
@@ -83,7 +85,7 @@ public class LoginController {
 	public String uploadprofile(@RequestParam("name") String name,@RequestParam("file") MultipartFile file,Model model){
 		 credentials c = new credentials();
         AmazonS3 s3client = new AmazonS3Client(c.awscreds);
-        String bucketname="testingcodedeployneucsye6225";
+        String bucketname="code-deploy.neu-csye6225-spring2017-team-3.com";
         try{
         	InputStream is =file.getInputStream();
         s3client.putObject(new PutObjectRequest(bucketname,name,is,new ObjectMetadata()).withCannedAcl(CannedAccessControlList.PublicRead));
