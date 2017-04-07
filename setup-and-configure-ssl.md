@@ -21,5 +21,23 @@ If the certificate is imported successfully, and the keystore is completed, you 
 To check the certificates which are added in the keystore run the command below:
 
 keytool -list -keystore yourkeystore.jks -v
-You should see details of the certificates imported into the keystore in the output:
+You should see details of the certificates imported into the keystore in the output
+0n screenshot the chain consists of 2 certificates: root and certificate signed by root, that was created for testing purposes. Nowadays usually chain has at least three certificates: root, intermediate and certificate signed by intermediate.
 
+To review the certificates added to the keystore as a plain text run the following command:
+
+keytool -list -rfc -keystore yourkeystore.jks
+Once the the keystore is completed, you will need to describe it in the configuration of your tomcat.
+
+Usually tomcat’s configuration file is named server.xml.
+
+Open it as a plain text and create there a record like below:
+
+<Connector port="8443" protocol="HTTP/1.1"
+SSLEnabled="true"
+scheme="https" secure="true" clientAuth="false"
+sslProtocol="TLS" keystoreFile="/your_path/yourkeystore.jks"
+keystorePass="password_for_your_key_store" />
+
+run "sh restarttomcat7.sh" to restrat the tomcat7 server on ubuntu machine 16.04
+then you can see the certificate listed on the "https" i.e 8443
