@@ -6,7 +6,7 @@
  * Mayuresh Dabholkar(dabholkar.m@husky.neu.edu)  
 
 ###Overview  
- Dressup.com is an ecommerce web application which provides both B2B as well as B2C business models. The website is aimed at providing latest fashion outfits with information on latest fashion to customers. The website can be used by three types of users: First the customer who buys products from the website using shopping cart functionality, Second the admin who manages the users and provides admin support as well as manages the whole website, Third the dealers who can add their items to be sold on the website.  
+ Dressup.com is an ecommerce web application which provides B2C business models. The website is aimed at providing latest fashion outfits with information on latest fashion to customers. The website can be used by two types of users: First the customer who buys products from the website using shopping cart functionality, Second the admin who manages the users and provides admin support as well as manages the whole website.  
  
 ###User Interface  
  The application that we are developing is a web application and will work on any web browser. We have decided to make an e-commerce website to sell clothes online.The website will be created in Java using Spring framework and hibernate. Extensive use of latest CSS and Bootsrap will be used to design the website. The application will be user friendly and self descriptive.    
