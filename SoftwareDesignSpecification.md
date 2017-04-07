@@ -25,6 +25,73 @@
 
 ### User account
  Session management and cookies will be used to provide login /logout and shopping cart functionality. Also cookies will be used to provide the functionality of displaying the website according to user preferences.  
+ 
+ ### Prerequisite 
+ 1. JDK1.7 or higher
+ 2. Maven
+ 3. Spring Jars
+ 4. JUnit Jars
+ 6. Hibernate Jars
+ 7. Mockito Jars
+ 8. Git Jars
+ 9. MySQL engine
+10. Dynamodb engine  
+
+### Unit test  
+Test cases are written in JUnit to check if the internal view resolver points to the expected view or not. Selenium is used for performing automatic testing. Mockito is used to mock a user and check for all links and Http Status codes for the links.   
+
+### Unit test Cases  
+
+View resolvers for each page
+Authentication of user
+User registeration
+### Travis-ci link  
+https://travis-ci.com/tushargl016/neu-csye6225-4/builds/39173280
+
+### Domain Name
+neu-csye6225-spring-2017-team-3.com
+### IAM Console
+https://neu-csye6225-team-3.signin.aws.amazon.com/console
+## Bash Script  
+instance.sh file stored in the repository  
+
+### Databases  
+
+ 1.MySQL   
+
+### Use Cases  Completed  
+
+### Amazon Services used  
+
+ 1. S3       
+ 2. MySQL  
+ 3. EC2  
+ 4. Route53  
+ 5. SES  
+ 
+ ### Front End  
+ 1. Login
+ 2. Register
+ 3. Menu
+ 4. Item Display
+ 5. Cart Pages
+ 6. Checkout
+ 7. Forgot Password
+ 8. Careers
+### Back end  
+1. Login
+2. Register
+3. Menu
+4. Item Display
+5. Cart Pages
+6. Checkout
+7. Admin login
+8. List of users
+9. List of orders
+10. Adding new items
+11. Fogot Password
+12. Careers
+
 
 
 
