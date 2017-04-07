@@ -17,6 +17,7 @@ after_success:
 - pwd
 before_deploy:
 - cd ..
+- pwd
 deploy:
   - provider: s3
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
