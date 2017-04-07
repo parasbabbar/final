@@ -45,15 +45,6 @@ Test cases are written in JUnit to check if the internal view resolver points to
 View resolvers for each page
 Authentication of user
 User registeration
-### Travis-ci link  
-https://travis-ci.com/tushargl016/neu-csye6225-4/builds/39173280
-
-### Domain Name
-neu-csye6225-spring-2017-team-3.com
-### IAM Console
-https://neu-csye6225-team-3.signin.aws.amazon.com/console
-## Bash Script  
-instance.sh file stored in the repository  
 
 ### Databases  
 
