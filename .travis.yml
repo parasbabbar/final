@@ -18,7 +18,6 @@ after_success:
 before_deploy:
 - cd ..
 deploy:
-  matrix:
   - provider: s3
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     secret_access_key:
