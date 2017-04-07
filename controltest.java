@@ -62,6 +62,11 @@ String expectedval12=lc.forgot();
 assertEquals(expectedval12,"resetnotify");
 String expectedval13=lc.reset();
 assertEquals(expectedval13,"resetpassword");
+String expectedval14=lc.uploadprofile();
+assertEquals(expectedval14,"accept");
+String expectedval15=lc.applicationaccepted();
+assertEquals(expectedval15,"accept");
+			     
 			     
 			     
 			     
