@@ -20,12 +20,12 @@ public class controlTest {
        
 	}
 		@Test
-	public void test() {StudentController c =new StudentController();
+	public void test4() {StudentController c =new StudentController();
 	String expectedval=c.listUsers();
     assertEquals(expectedval,"register");
 }
 	@Test
-	public void test() {OrderlistController oc =new OrderlistController();
+	public void test5() {OrderlistController oc =new OrderlistController();
 	String expectedval=oc.placeorder();
     assertEquals(expectedval,"placeorder");
 String expectedval2=oc.orderlist();
@@ -35,7 +35,7 @@ assertEquals(expectedval3,"home");
 
 	}
 	@Test
-	public void test() {LoginController lc =new LoginController();
+	public void test6() {LoginController lc =new LoginController();
 	String expectedval=lc.loginpage();
     assertEquals(expectedval,"login");
 String expectedval2=lc.homeypage();
@@ -54,10 +54,20 @@ String expectedval8=lc.contact();
 assertEquals(expectedval8,"contact");
 String expectedval9=lc.userlist();
 assertEquals(expectedval9,"userlist");
-
+String expectedval10=lc.performreset();
+assertEquals(expectedval10,"login");
+String expectedval11=lc.forget();
+assertEquals(expectedval11,"forgot");
+String expectedval12=lc.forgot();
+assertEquals(expectedval12,"resetnotify");
+String expectedval13=lc.reset();
+assertEquals(expectedval13,"resetpassword");
+			     
+			     
+			     
 	}
 	@Test
-	public void test() {ItemController ic =new ItemController();
+	public void test7() {ItemController ic =new ItemController();
 	String expectedval=ic.addItems();
     assertEquals(expectedval,"manage");
 String expectedval2=ic.home();
