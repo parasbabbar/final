@@ -19,7 +19,6 @@ before_deploy:
 - cd ..
 - pwd
 deploy:
-  matrix:
   - provider: s3
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     secret_access_key:
