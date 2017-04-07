@@ -31,7 +31,7 @@ User registeration
 https://travis-ci.com/tushargl016/neu-csye6225-4/builds/39173280
 
 ### Domain Name
-neu-csye6225-spring-2017-team-3.com
+neu-csye6225-spring2017-team-3.com
 ### IAM Console
 https://neu-csye6225-team-3.signin.aws.amazon.com/console
 ## Bash Script  
@@ -49,7 +49,11 @@ instance.sh file stored in the repository
  2. MySQL  
  3. EC2  
  4. Route53  
- 5. SES  
+ 5. SES 
+ 6. Codedeploy
+ 7. IAM
+ 8. CLOUDWATCH
+ 9. EBS
  
  ### Front End  
  1. Login
@@ -73,8 +77,7 @@ instance.sh file stored in the repository
 10. Adding new items
 11. Fogot Password
 12. Careers
-For AWS CLI
-
+### AWS Configurations
 1) Install aws cli
 2) Configured IAM.
 3) Created groups and users.
