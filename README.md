@@ -45,11 +45,11 @@ instance.sh file stored in the repository
 
 ### Amazon Services used  
 
- 1.S3     
- 2.MySQL
- 3.EC2
- 4.Route53
- 5.SES
+ 1. S3       
+ 2. MySQL  
+ 3. EC2  
+ 4. Route53  
+ 5. SES  
  
  ### Front End  
  1. Login
