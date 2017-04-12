@@ -203,7 +203,7 @@ else{
 			String TO = user.getEmail();
 			String SUBJECT = "Forgot Your Password?";
 			 String newline = System.getProperty("line.separator");
-			 String link="https://neu-csye6225-spring2017-team-3.com/reset/?id="+id+"";
+			 String link="52.53.174.203:8080/project-1.0.0-BUILD-SNAPSHOT/reset/?id="+id+"";
 			String BODY = "Forgot Your Password?"+newline+link;
 			AWSPostMan postman= new AWSPostMan();
 			postman.sendmail(FROM, TO, BODY, SUBJECT);
