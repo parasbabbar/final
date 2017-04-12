@@ -25,7 +25,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="<c:url value="/resources/home.css"/>" rel="stylesheet" type="text/css">
-  
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
   <script src="<c:url value="/resources/modalValidation.js"/>"></script>
 
 <style>
@@ -75,7 +75,14 @@ body {
   </div>
 </nav> 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="container" style= "margin-top: 100px">
 <div id="feedback">
 <div class="main">
@@ -83,39 +90,54 @@ body {
   <div class="imgcontainer">
         
       </div>
-      
-        <form action="register" name="user" modelAttribute="user" autocomplete="on" method="POST">
+      ${regerrormessage} 
+      ${cheat} 
+        <form action="register" name="user" modelAttribute="user" autocomplete="on" method="POST" >
 	 <div class="form-group">
     <label for="firstname">User Name<b class="txtred">*</b>:</label>
-    <input type="text" class="form-control" id="firstname" name="userName">
+    <input type="text" class="form-control" id="firstname" name="userName" required>
   </div>
 	
   <div class="form-group">
+     <form action="register" name="user" modelAttribute="user" autocomplete="on" method="POST">
     <label for="regEmail">Email address<b class="txtred">*</b>:</label>
-    <input type="email" class="form-control" id="regEmail" name="email"> <br>
+    <input type="email" class="form-control" id="regEmail" name="email" required> <br>
 	<span id="emailSpan" class="txtred"> </span>
   </div>
   <div class="form-group">
     <label for="pass">Password<b class="txtred">*</b>:</label>
-    <input type="password" class="form-control" id="pass" name="password"> <br>
+    <input type="password" class="form-control" id="pass" name="password" required> <br>
 	<span id="passSpan" class="txtred"> </span>
   </div>
-	   <div class="form-group">
-        <form action="register" name="user" modelAttribute="user" autocomplete="on" method="POST">
+	  
+       
 	 <div class="form-group">
     <label for="Address">Address<b class="txtred">*</b>:</label>
-    <input type="text" class="form-control" id="firstName" name="address">
+    <input type="text" class="form-control" id="firstName" name="address" required>
   </div>
-   <input type="hidden" name="totalbuy" value="0">
 	<input type="submit" />
 	
 	
 </form> 
-      </div>
+
+
     
 
 </div>
-</div></div><!-- Container (Footer Section) -->
+</div></div>
+<br>
+
+<br>
+<br>
+
+Characters like >,<,',= are not allowed
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><!-- Container (Footer Section) -->
 <!-- Container (Footer Section) -->
 <div  class="container-fluid" style ="background-color:#3c3c3c; color:black">
   
@@ -129,16 +151,12 @@ body {
 		</ul>
     </div>
 	<div class="col-xs-6  col-sm-2 text-center">
-		<ul class="menu" >
-        <li><a href="${pageContext.request.contextPath}/Terms" method="GET">Terms and Conditions</a></li>
-        <li><a href="${pageContext.request.contextPath}/Login" method="GET">My Account</a></li>
-		</ul>
-    </div>
+	</div>
 	<p style= "margin-left:900px">Contact us and we'll get back to you within 24 hours.</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Delhi, India</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+91 9013524517</a></p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@dressup.com"> contact@dressup.com </a></p>
-    <p style= "margin-left:495px">&copy; 2016 Dressup.com. All rights reserved </p>
+        <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Boston, USA</p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="">+1 8577636481</a></p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href=""> contact@dressup.com </a></p>
+     <p style= "margin-left:495px">&copy; 2017 Dressup.com. All rights reserved </p>
 
 	
   </div>

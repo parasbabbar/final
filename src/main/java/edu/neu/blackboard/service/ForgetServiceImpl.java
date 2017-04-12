@@ -40,6 +40,12 @@ public class ForgetServiceImpl implements ForgetService {
 		foregetDAO.removeticket2(email);
 		
 	}
+	@Override
+	@Transactional
+	public long checkpresent(String id) {
+		// TODO Auto-generated method stub
+		return foregetDAO.checkpresent(id);
+	}
 	
 
 }

@@ -40,6 +40,9 @@ public class LoginServiceImpl implements LoginService {
 		
 	}
 
-	
+@Override 
+public long checkticket2(String email){
+	return loginDAO.checkticket2(email);
+}
 
 	}

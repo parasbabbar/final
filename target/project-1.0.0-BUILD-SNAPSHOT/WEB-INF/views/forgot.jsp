@@ -127,13 +127,20 @@ span.psw {
 <br>
 <br>
 ${errormessage}
-
+ ${cheat} 
 enter email:
- <input type="text" name="email" >
+ <input type="text" name="email" required>
 
  <input type="submit">
 </div>
 </form>
+
+ <br>
+ <br>
+ <br>
+<br>
+<br>
+<br>
 <!-- Container (Footer Section) -->
 <div  class="container-fluid" style ="background-color:#3c3c3c; color:black">
   
@@ -147,16 +154,14 @@ enter email:
 		</ul>
     </div>
 	<div class="col-xs-6  col-sm-2 text-center">
-		<ul class="menu" >
-        <li><a href="${pageContext.request.contextPath}/Terms" method="GET">Terms and Conditions</a></li>
-        <li><a href="${pageContext.request.contextPath}/Login" method="GET">My Account</a></li>
-		</ul>
+		
     </div>
 	<p style= "margin-left:900px">Contact us and we'll get back to you within 24 hours.</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Delhi, India</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+91 9013524517</a></p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@dressup.com"> contact@dressup.com </a></p>
-    <p style= "margin-left:495px">&copy; 2016 Dressup.com. All rights reserved </p>
+        <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Boston, USA</p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="">+1 8577636481</a></p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href=""> contact@dressup.com </a></p>
+    
+    <p style= "margin-left:495px">&copy; 2017 Dressup.com. All rights reserved </p>
 
 	
   </div>

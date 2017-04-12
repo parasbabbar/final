@@ -30,11 +30,15 @@ private LoginService loginService;
 @RequestMapping(value="/placeorder/{s}",method=RequestMethod.GET)
 public String placeorder(@PathVariable(value="s") String totalcost,HttpSession session,ModelMap model)
 {if(session.getAttribute("email")==null){
-	model.put("errormessage", "Need to login for placing order");
-	return"login";
+	model.addAttribute("errormessage", "Need to login for placing order");
+	return"cart";
 }
 else{
-		List<Order> cart =(List<Order>)session.getAttribute("cart");
+	if(session.getAttribute("cart")== null){
+	model.put("noitemsincart","There are no items in cart");
+	return "noitems";
+	}
+	else{List<Order> cart =(List<Order>)session.getAttribute("cart");
 	for(int i=0;i<cart.size();i++){
 		String address=session.getAttribute("address").toString();
 		String email=session.getAttribute("email").toString();
@@ -42,16 +46,16 @@ else{
 		int quantity=cart.get(i).getQuantity();
 		Long cost= cart.get(i).getI().getItemcost();
 		long Subtotal=cost*quantity;
-		
+session.removeAttribute("cart");		
 		
 		orderlistService.addorder(email,itemname,quantity,address,Subtotal);
 	itemService.updatequantity(itemname,quantity);
 	
 	}
-	//loginService.increasetotalcost(totalcost,session.getAttribute("email").toString());
 	model.put("totalcost", totalcost);
 	return "placeorder";
-}
+	}
+	}
 
 }
 @RequestMapping(value="/orderlist",method=RequestMethod.GET)

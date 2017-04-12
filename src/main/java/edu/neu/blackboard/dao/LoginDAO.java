@@ -12,4 +12,6 @@ public interface LoginDAO {
 	public void increasetotalcost(String totalcost, String email);
 	
 	public Users checkuser(Users user);
+
+	long checkticket2(String email);
 }

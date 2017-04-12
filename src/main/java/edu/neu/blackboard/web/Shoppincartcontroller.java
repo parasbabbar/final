@@ -25,7 +25,14 @@ import java.util.*;
 public class Shoppincartcontroller {
 	@Autowired
 	private ItemService itemService;
-@RequestMapping(value="/addtocart/{itemname}",method=RequestMethod.GET)
+
+	
+	@RequestMapping(value="/noitems", method=RequestMethod.GET)
+	public String noitems(Model model){
+		return "noitems";
+	}
+	
+	@RequestMapping(value="/addtocart/{itemname}",method=RequestMethod.GET)
 public String ordernow(@PathVariable(value="itemname") String itemname,HttpSession session)
 	{
 if(session.getAttribute("cart")== null){
@@ -74,4 +81,5 @@ return -1;
 		
 		
 }
+
 }

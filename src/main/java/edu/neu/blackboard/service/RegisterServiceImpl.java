@@ -29,10 +29,20 @@ public class RegisterServiceImpl implements RegisterService {
 	}
 
 	@Override
+	@Transactional
+
 	public void updatepassword(String email, String password) {
 		// TODO Auto-generated method stub
 		registerDAO.updatepassword(email,password);
 		
+	}
+
+	@Override
+	@Transactional
+
+	public void addUsers(String email, String password, String username, String address) {
+		// TODO Auto-generated method stub
+registerDAO.addUsers(email,password,username,address);		
 	}
 
 }

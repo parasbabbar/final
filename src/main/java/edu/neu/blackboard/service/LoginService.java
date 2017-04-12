@@ -11,4 +11,6 @@ public interface LoginService {
 	public void increasetotalcost(String totalcost, String string);
 
 	public Users checkuser(Users user);
+
+	long checkticket2(String email);
 }
