@@ -108,7 +108,7 @@ Penetration testing on https://neu-csye6225-spring2017-team-7.me(Report appended
 
 ################Cloudwatch Agent
 
-Installed CloudWatch agent on your EC2 instance and ship your application logs to CloudWatch
+Installed CloudWatch agent on my EC2 instance and shipped my application logs to CloudWatch
 
 ###############Timezone
 
