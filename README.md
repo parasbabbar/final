@@ -100,3 +100,16 @@ For AWS CLI
 23) Domain Name of our Web Application: https://www.neu-csye6225-spring2017-team-3.com
 24) Created DKIM and SPF record for SES
 25) Got production access for SES
+
+
+#########Penetration Testing
+
+Penetration testing on https://neu-csye6225-spring2017-team-7.me(Report appended on Assignment 9 repo)
+
+################Cloudwatch Agent
+
+Installed CloudWatch agent on your EC2 instance and ship your application logs to CloudWatch
+
+###############Timezone
+
+Configures UTC Timezone to my Ubuntu instance 
