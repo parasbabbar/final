@@ -27,7 +27,7 @@ files:
 #        - file
 
 #hooks:
- # AfterInstall:
-  # - location: ./restartTomcat.sh
-   #  timeout: 180
-    # runas: ubuntu
+    AfterInstall:
+  - location: ./restartTomcat.sh
+    timeout: 180
+    runas: ubuntu
