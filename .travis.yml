@@ -31,8 +31,8 @@ deploy:
     bucket: code-deploy.neu-csye6225-spring2017-team-3.com
     key: final.zip
     bundle_type: zip
-    application: csye6225-3
-    deployment_group: csye6225-3
+    application: csye
+    deployment_group: csye
     region: us-west-1
     wait-until-deployed: true
     secret_access_key:
