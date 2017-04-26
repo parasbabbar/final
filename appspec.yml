@@ -6,10 +6,8 @@ files:
     destination: /home/ubuntu
   - source: ./restartTomcat.sh
     destination: /home/ubuntu
-  - source: ./target/project-1.0.0-BUILD-SNAPSHOT.war
+  - source: ./build/libs/project-1.0.0-BUILD-SNAPSHOT.war
     destination: /var/lib/tomcat7/webapps
-#  - source: ./awslogs.conf
-#    destination: /var/awslogs/etc
 
 #permissions:
 #  - object: /var/lib/tomcat7/webapps
@@ -26,8 +24,9 @@ files:
 #      type:
 #        - file
 
-#hooks:
-    AfterInstall:
-  - location: ./restartTomcat.sh
-    timeout: 180
-    runas: ubuntu
+hooks:
+  AfterInstall:
+   - location: ./restartTomcat.sh
+     timeout: 180
+     runas: ubuntu
+
