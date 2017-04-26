@@ -6,7 +6,7 @@ files:
     destination: /home/ubuntu
   - source: ./restartTomcat.sh
     destination: /home/ubuntu
-  - source: ./build/libs/project-1.0.0-BUILD-SNAPSHOT.war
+  - source: ./target/project-1.0.0-BUILD-SNAPSHOT.war
     destination: /var/lib/tomcat7/webapps
 
 #permissions:
