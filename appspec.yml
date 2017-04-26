@@ -8,8 +8,8 @@ files:
     destination: /home/ubuntu
   - source: ./target/project-1.0.0-BUILD-SNAPSHOT.war
     destination: /var/lib/tomcat7/webapps
- # - source: ./awslogs.conf
-  #  destination: /var/awslogs/etc
+#  - source: ./awslogs.conf
+#    destination: /var/awslogs/etc
 
 #permissions:
 #  - object: /var/lib/tomcat7/webapps
