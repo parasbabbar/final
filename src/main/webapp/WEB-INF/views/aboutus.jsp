@@ -84,12 +84,12 @@ $(document).ready(function(){
 		<c:choose>
     <c:when test="${sessionScope.email != null}">
  <li><a href="${pageContext.request.contextPath}/logout" method="get"><span class="glyphicon glyphicon-user"></span> Logout</li></a> 
-        <br />
+      
     </c:when>    
     <c:otherwise>
       <li><a href="${pageContext.request.contextPath}/login" method="GET"><span class="glyphicon glyphicon-log-in"> Login </a>  </li>
 	  <li><a href="${pageContext.request.contextPath}/register" method="GET"> <span class="glyphicon glyphicon-user">Signup</a> </li>
-        <br />
+      
     </c:otherwise>
 </c:choose>
 		 <li><a href="${pageContext.request.contextPath}/cart" ><span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a></li>
@@ -106,7 +106,7 @@ $(document).ready(function(){
 		<div class="team">
 	      <div class="container">
 		  <img src="<c:url value="/resources/aboutus.jpg"/>" id="ig1">
-		  <a href="${pageContext.request.contextPath}/aboutus"><button type="button" class="btn btn-success" id="bf" onclick="#aboutus"><span class="glyphicon glyphicon-chevron-right fa-lg"></span>
+		  <a href="${pageContext.request.contextPath}/aboutus"><button type="button" class="btn btn-success" id="bf" ><span class="glyphicon glyphicon-chevron-right fa-lg"></span>
 		  </button></a>
 		</div>
 			
@@ -124,9 +124,15 @@ You love fashion. That is right, we have got your number and we aim to provide y
 </p><p>
 Over the fifteen-year life we have dedicated ourselves to providing the best customer service.
  </p><p>
-Formerly known as Dressup Online store, and originally as Dress briefly before that, Dressup.com was created in 1999 in Delhi. 
+The company is founded by two people:<br>
+<b>Tushar Goel</b>: Graduate Student at Northeastern University majoring in Computer Systems Engineering. An experienced java developer and technology enthusiast who is eager to learn new technology.<br>
+<b>Paras Babbar</b>: Graduate Student at Northeastern University majoring in Telecommunications Engineering. Disciplined, punctual and conducive in nature makes him the best in his field.  
+
 </p><p>
 Have questions, compliments or concerns? Visit our FAQ where you can also contact us.</p>
+
+
+
 <footer >
 <br><br>
 </footer>
@@ -146,16 +152,13 @@ Have questions, compliments or concerns? Visit our FAQ where you can also contac
 		</ul>
     </div>
 	<div class="col-xs-6  col-sm-2 text-center">
-		<ul class="menu" >
-        <li><a href="${pageContext.request.contextPath}/Terms" method="GET">Terms and Conditions</a></li>
-        <li><a href="${pageContext.request.contextPath}/Login" method="GET">My Account</a></li>
-		</ul>
+		
     </div>
 	<p style= "margin-left:900px">Contact us and we'll get back to you within 24 hours.</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Delhi, India</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+91 9013524517</a></p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@dressup.com"> contact@dressup.com </a></p>
-    <p style= "margin-left:495px">&copy; 2016 Dressup.com. All rights reserved </p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Boston, USA</p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="">+1 8577636481</a></p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href=""> contact@dressup.com </a></p>
+    <p style= "margin-left:495px">&copy; 2017 Dressup.com. All rights reserved </p>
 
 	
   </div>

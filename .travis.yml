@@ -14,23 +14,20 @@ after_success:
 - pwd
 - cd codedeploy
 - ls -al
-- pwd
 before_deploy:
 - cd ..
-- pwd
-
 deploy:
   - provider: s3
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
     secret_access_key:
-     secure: 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
+     secure: kDDI4tzz1KWunpCfAFRAyGqSLwzVsGmBdUbuvJs0bYn+la9AxPW06YPsAkIkqkKszAG9bgqN2A0Im5YMlHov4vDKg6moImhobiAph4SvU3wIUx/TfOaLNuYfhjsplpnRizt9AXalFeIJLuLXpP1oU/Q+k6n95TC6nv0Bfg5FwVj0+hBVo0cxAXMnlSwbDg63rXAF2DxY5aWPzl0/YRBoOn5czuBfVC4B4y71FT+7vu9D5QP743aDEoNq3Mdz+uQFwWULKgHrMmsr29Kb0zcz24w0sLaJvtfCDJLwfmdRfktnJqpo0AbMx1DOuNYFE8VUOA/csr3JzplBlxNoMTUpOGfqoxYVMts68OcQOQQ/7rYBF+V1wJj+ekxN2Oipm2ZPM57T7DPyu4M2IQ49EaselPcQLKipCyeeXtazhMzxLWG+esfsRGl1O60QIokQ8E0s6rRODYoOYRqT4pA9g5YMQYTbvRqVCp9LR68C/l/A6QK3Nf7wY1TV081gNjLzOWBmrZbeAIxGm3c1jkG73qGGZjVZp3wP3VZi8DCXLTZt2RGa5sc0c7xPDNeFx7dcfDil7z9epQhVJLmf5nZnV7/zulnZYa+PYV8uK2sGp/4sfQHYdQSdJEXuBMVoaQXa23X3XGHtGtdXIuIgyK6NPePqR7pugz6K9peM2FlmoZtrgHg=
     local_dir: codedeploy
-    bucket: code-deploy.neu-csye6225-spring2017-team-3.com
+    bucket: testingcodedeployneucsye6225
     region: us-west-1
     skip_cleanup: true
   - provider: codedeploy
     access_key_id: AKIAJEPUN3YQCGSDQBMQ
-    bucket: code-deploy.neu-csye6225-spring2017-team-3.com
+    bucket: testingcodedeployneucsye6225
     key: final.zip
     bundle_type: zip
     application: csye6225-3
@@ -38,8 +35,8 @@ deploy:
     region: us-west-1
     wait-until-deployed: true
     secret_access_key:
-     secure: xPsyE/w3EAPSKDudTbH0mag79jNj4tlQA5FcgaI7
+     secure: kDDI4tzz1KWunpCfAFRAyGqSLwzVsGmBdUbuvJs0bYn+la9AxPW06YPsAkIkqkKszAG9bgqN2A0Im5YMlHov4vDKg6moImhobiAph4SvU3wIUx/TfOaLNuYfhjsplpnRizt9AXalFeIJLuLXpP1oU/Q+k6n95TC6nv0Bfg5FwVj0+hBVo0cxAXMnlSwbDg63rXAF2DxY5aWPzl0/YRBoOn5czuBfVC4B4y71FT+7vu9D5QP743aDEoNq3Mdz+uQFwWULKgHrMmsr29Kb0zcz24w0sLaJvtfCDJLwfmdRfktnJqpo0AbMx1DOuNYFE8VUOA/csr3JzplBlxNoMTUpOGfqoxYVMts68OcQOQQ/7rYBF+V1wJj+ekxN2Oipm2ZPM57T7DPyu4M2IQ49EaselPcQLKipCyeeXtazhMzxLWG+esfsRGl1O60QIokQ8E0s6rRODYoOYRqT4pA9g5YMQYTbvRqVCp9LR68C/l/A6QK3Nf7wY1TV081gNjLzOWBmrZbeAIxGm3c1jkG73qGGZjVZp3wP3VZi8DCXLTZt2RGa5sc0c7xPDNeFx7dcfDil7z9epQhVJLmf5nZnV7/zulnZYa+PYV8uK2sGp/4sfQHYdQSdJEXuBMVoaQXa23X3XGHtGtdXIuIgyK6NPePqR7pugz6K9peM2FlmoZtrgHg=
 notifications:
   email:
     recipients:
-    - babbar.p@husky.neu.edu
+    - goel.t@husky.neu.edu

@@ -13,5 +13,6 @@ public interface ForgetDAO {
 
 	public void removeticket(String id);
 	public void removeticket2(String email);
+	public long checkpresent(String id);
 
 }

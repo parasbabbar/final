@@ -111,10 +111,11 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/com.couchbase.client/couchbase-client -->
+<!-- https://mvnrepository.com/artifact/com.couchbase.client/java-client -->
 <dependency>
     <groupId>com.couchbase.client</groupId>
-    <artifactId>couchbase-client</artifactId>
-    <version>1.4.4</version>
+    <artifactId>java-client</artifactId>
+    <version>2.3.4</version>
 </dependency>
 		
 		<!-- Spring Security -->

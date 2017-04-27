@@ -13,5 +13,6 @@
    <mapping class="edu.neu.blackboard.domain.Items" />
    <mapping class="edu.neu.blackboard.domain.Orderlist" />
    <mapping class="edu.neu.blackboard.domain.Order" />
+   <mapping class="edu.neu.blackboard.domain.Verify" />
  </session-factory>
 </hibernate-configuration>

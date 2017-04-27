@@ -42,12 +42,12 @@
 		<c:choose>
     <c:when test="${sessionScope.email != null}">
  <li><a href="${pageContext.request.contextPath}/logout" method="get"><span class="glyphicon glyphicon-user"></span> Logout</li></a> 
-        <br />
+    
     </c:when>    
     <c:otherwise>
       <li><a href="${pageContext.request.contextPath}/login" method="GET"><span class="glyphicon glyphicon-log-in"> Login </a>  </li>
 	  <li><a href="${pageContext.request.contextPath}/register" method="GET"> <span class="glyphicon glyphicon-user">Signup</a> </li>
-        <br />
+    
     </c:otherwise>
 </c:choose>
 		 <li><a href="${pageContext.request.contextPath}/cart" ><span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a></li>
@@ -117,15 +117,40 @@ span.psw {
     }
 }
 </style>
+<br>
+<br>
+<br>
+<br>
+
+ <br>
+ <br>
+ <br>
+
 <h1>Email sent</h1>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+
+ <br>
+ <br>
+ <br>
+
  <div class="container">
 An email containing a link has been send to your email address.
 
 Please click on the link to reset your password
 </div>
 <br>
+<br>
+<br>
+<br>
+
+ <br>
+ <br>
+ <br>
 <br>
 <br>
 <br>
@@ -142,19 +167,30 @@ Please click on the link to reset your password
 		</ul>
     </div>
 	<div class="col-xs-6  col-sm-2 text-center">
-		<ul class="menu" >
-        <li><a href="${pageContext.request.contextPath}/Terms" method="GET">Terms and Conditions</a></li>
-        <li><a href="${pageContext.request.contextPath}/Login" method="GET">My Account</a></li>
-		</ul>
-    </div>
+	</div>
 	<p style= "margin-left:900px">Contact us and we'll get back to you within 24 hours.</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Delhi, India</p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+91 9013524517</a></p>
-      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@dressup.com"> contact@dressup.com </a></p>
-    <p style= "margin-left:495px">&copy; 2016 Dressup.com. All rights reserved </p>
+        <p style= "margin-left:900px"><span class="glyphicon glyphicon-map-marker"></span> Boston, USA</p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-phone"></span><a href="">+1 8577636481</a></p>
+      <p style= "margin-left:900px"><span class="glyphicon glyphicon-envelope"></span><a href=""> contact@dressup.com </a></p>
+    
+    <p style= "margin-left:495px">&copy; 2017 Dressup.com. All rights reserved </p>
 
 	
   </div>
+ 
+ <br>
+ <br>
+ <br>
+<br>
+<br>
+<br>
+ <br>
+ <br>
+ <br>
+<br>
+<br>
+<br>
+ 
  
 <div class="socialDiv" >
 	<ul class="social">

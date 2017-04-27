@@ -5,6 +5,7 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Repository;
 
 import edu.neu.blackboard.domain.*;
@@ -39,8 +40,10 @@ public class RegisterHibernateDAOImpl implements RegisterDAO {
 		Transaction tx3 = s.beginTransaction();
 		Users u= new Users();
 		long id=us2.getId();
-	 u.setId(id);	
-	 u.setPassword(password);
+	 u.setId(id);
+	 String hp=BCrypt.hashpw(password, BCrypt.gensalt());
+	    
+	 u.setPassword(hp);
 	 u.setEmail(email);
 	 u.setAddress( us2.getAddress());
 	 u.setUserName(us2.getUserName());
@@ -48,6 +51,21 @@ public class RegisterHibernateDAOImpl implements RegisterDAO {
 		//sessionFactory.getCurrentSession().update(us2);
 tx3.commit();
 s.close();
+	}
+
+	@Override
+	public void addUsers(String email, String password, String username, String address) {
+		// TODO Auto-generated method stub
+		Session s=sessionFactory.openSession();
+		Transaction tx=s.beginTransaction();
+	    Users usr= new Users();
+	    usr.setEmail(email);
+	    usr.setPassword(password);
+	    usr.setAddress(address);
+	    usr.setUserName(username);
+	    s.save(usr);
+	    tx.commit();
+		s.close();
 	}
 
 }
