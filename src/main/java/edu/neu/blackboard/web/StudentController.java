@@ -83,7 +83,7 @@ public class StudentController {
 				String TO = user.getEmail();
 				String SUBJECT = "Verify Yourself by clicking the link";
 				 String newline = System.getProperty("line.separator");
-				 String link="52.53.174.203:8080/project-1.0.0-BUILD-SNAPSHOT/verify/?verid="+id+"";
+				 String link="https://neu-csye6225-spring2017-team-3.com/verify/?verid="+id+"";
 				String BODY = "Verify yourself by clicking to this link"+newline+link;
 				AWSPostMan postman= new AWSPostMan();
 				postman.sendmail(FROM, TO, BODY, SUBJECT);

@@ -14,37 +14,37 @@ import com.amazonaws.services.simpleemail.model.Message;
 import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 public class AWSPostMan{
 
-    public void sendmail(String FROM, String TO, String BODY,String SUBJECT) throws IOException {
-
+    public void sendmail(String FROM, String TO, String BODY,String SUBJECT) throws IOException {    	
+                
         // Construct an object to contain the recipient address.
         Destination destination = new Destination().withToAddresses(new String[]{TO});
-
+        
         // Create the subject and body of the message.
         Content subject = new Content().withData(SUBJECT);
-        Content textBody = new Content().withData(BODY);
+        Content textBody = new Content().withData(BODY); 
         Body body = new Body().withText(textBody);
-
+        
         // Create a message with the specified subject and body.
         Message message = new Message().withSubject(subject).withBody(body);
-
+        
         // Assemble the email.
         SendEmailRequest request = new SendEmailRequest().withSource(FROM).withDestination(destination).withMessage(message);
-
+        
         try
-        {
+        {   
             credentials c = new credentials();
             AmazonSimpleEmailServiceClient client = new AmazonSimpleEmailServiceClient(c.awscreds);
-
+               
             Region REGION = Region.getRegion(Regions.US_WEST_2);
             client.setRegion(REGION);
-
+       
             // Send the email.
-            client.sendEmail(request);
-
+            client.sendEmail(request);  
+            
         }
-        catch (Exception ex)
+        catch (Exception ex) 
         {
-
+            
         }
     }
 }

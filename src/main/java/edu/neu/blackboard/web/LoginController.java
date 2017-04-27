@@ -95,7 +95,7 @@ if(name!=null){
     else{
 		credentials c = new credentials();
         AmazonS3 s3client = new AmazonS3Client(c.awscreds);
-        String bucketname="testingcodedeployneucsye6225";
+        String bucketname="code-deploy.neu-csye6225-spring2017-team-3.com";
         
         String type=file.getOriginalFilename();
         int lastIndex = type.lastIndexOf('.');
@@ -203,7 +203,7 @@ else{
 			String TO = user.getEmail();
 			String SUBJECT = "Forgot Your Password?";
 			 String newline = System.getProperty("line.separator");
-			 String link="52.53.174.203:8080/project-1.0.0-BUILD-SNAPSHOT/reset/?id="+id+"";
+			 String link="https://neu-csye6225-spring2017-team-3.com/reset/?id="+id+"";
 			String BODY = "Forgot Your Password?"+newline+link;
 			AWSPostMan postman= new AWSPostMan();
 			postman.sendmail(FROM, TO, BODY, SUBJECT);
